@@ -1,0 +1,43 @@
+/* Styles go here */
+.mh-vertical-scroll {
+  position: relative;
+  width: 400px;
+  height: 50px;
+  overflow-x: hidden;
+  overflow-y: none;
+  background-color: #666;
+}
+
+.mh-verical-scroll-content {
+  height: 100%;
+  width: 700px;
+}
+
+.mh-scrollbar {
+  position: absolute;
+  bottom: 0;
+  width: 400px;  
+  background-color: #ccc;
+}
+
+.mh-scroller {
+  height: 5px;
+  width: 100px;
+  background-color: #333;
+}
+
+.dumpContainer {
+  width: 300px;
+}
+
+ul {
+  height: 50px;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  display: inline-block;
+  width: 200px;
+  height: 50px;
+}
