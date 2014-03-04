@@ -15,7 +15,7 @@ app.directive('mhVerticalScroll', [ '$window', function(  $window ) {
       // calculate the real width
       var realWidth = 0;
       el.children().each(function(i) {
-        realWidth += $(this).width();
+        realWidth += $(this).innerWidth();
       });
       
       // add a scrollbar only if the content does not fit
