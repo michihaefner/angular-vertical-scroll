@@ -74,14 +74,14 @@ app.directive('mhVerticalScroll', [ '$window', function(  $window ) {
           //touch scrolling
           parent[0].addEventListener("touchstart", function(ev) {
             $.data(parent, "verticalScroll", true);
-            $.data(parent, "startX", ev.pageX );
+            $.data(parent, "startX", ev.changedTouches[0].pageX );
           });
           
           parent[0].addEventListener("touchmove", function(ev) {
             if ( $.data(parent, "verticalScroll") ) {
               
               var x = ev.pageX - $.data(parent, "startX");
-              $.data(parent, "startX", ev.pageX );
+              $.data(parent, "startX", ev.changedTouches[0].pageX );
               
               slideVertical(x);
             }
