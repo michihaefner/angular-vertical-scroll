@@ -72,12 +72,12 @@ app.directive('mhVerticalScroll', [ '$window', function(  $window ) {
           
           
           //touch scrolling
-          parent.bind("touchstart", function(ev) {
+          parent[0].addEventListener("touchstart", function(ev) {
             $.data(parent, "verticalScroll", true);
             $.data(parent, "startX", ev.pageX );
           });
           
-          parent.bind("touchmove", function(ev) {
+          parent[0].addEventListener("touchmove", function(ev) {
             if ( $.data(parent, "verticalScroll") ) {
               
               var x = ev.pageX - $.data(parent, "startX");
@@ -87,7 +87,7 @@ app.directive('mhVerticalScroll', [ '$window', function(  $window ) {
             }
           });
           
-          parent.bind("touchend", function(ev) {
+          parent[0].addEventListener("touchend", function(ev) {
             $.data(parent, "verticalScroll", false);
           });
         }
